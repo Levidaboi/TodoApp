@@ -15,12 +15,7 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
-   getLocalTodos();}
-   ,[]);
-
-  useEffect(() => {
     filterHandler();
-    saveLocalTodos();
   }, [todos,status] );
 
 
@@ -43,7 +38,7 @@ function App() {
   return (
     <div className="App">
      <header>
-      <h1>kicsi a faszom</h1>
+      <h1>Epic Todo App</h1>
      </header>
       <Form setStatus={setStatus} inputText={inputText} todos={todos} setTodos={setTodos} setInputText = {setInputText}/> 
       <TodoList filteredTodos={filteredTodos} setTodos={setTodos} todos={todos} />
